@@ -1,0 +1,8 @@
+streamlit
+transformers
+torch
+gTTS
+opencv-python
+deep-translator
+pillow
+install 
