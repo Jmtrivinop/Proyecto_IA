@@ -16,7 +16,7 @@ st.write("Reconocimiento de objetos usando la API de Gemini y traducción a espa
 
 # Configurar la clave de API de Gemini
 # genai.configure(api_key=os.getenv("GEMINI_API_KEY")) Para producción
-genai.configure(api_key="AIzaSyCeZvdjXg_-vroduRFkrWt1VWcqlbFUeMc")
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 def play_audio(text, lang="es"):
     tts = gTTS(text=text, lang=lang)
