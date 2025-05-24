@@ -1,30 +1,28 @@
-
 import streamlit as st
 
 st.set_page_config(page_title="Acerca del proyecto", layout="centered")
 st.title("ℹ️ Acerca del Proyecto")
 
 st.markdown("""
-## Eye-AI Vision Computational
+## Eye-AI con Gemini
 
-Este proyecto usa modelos de **Vision Transformer (ViT)** para realizar tareas de clasificación de imágenes
-y detección facial. También integra herramientas como:
+Este proyecto utiliza **Gemini 1.5**, el modelo de inteligencia artificial multimodal de Google, 
+para realizar análisis avanzados de imágenes, identificar objetos importantes y describir el entorno visual de forma automatizada. 
+Además, se integran herramientas como:
 
-- **Mediapipe** para detección facial.
-- **Google Translate** para traducción automática de etiquetas.
-- **gTTS** para convertir texto a voz.
-- **Streamlit** para una interfaz interactiva.
+- **Google Generative AI (Gemini)** para análisis de imágenes y generación de descripciones.
+- **Google Translate** para traducción automática de texto.
+- **gTTS** (Google Text-to-Speech) para conversión de texto a voz en español.
+- **Streamlit** para una interfaz web interactiva y accesible desde cualquier dispositivo, incluyendo móviles.
 
 ### Objetivo
 
-Desarrollar un sistema automático basado en visión computacional capaz de identificar 
-y describir objetos en el entorno cercano de una persona con discapacidad visual que se desplaza 
-asistida por un perro guía, proporcionando información en tiempo real mediante retroalimentación auditiva.
+Desarrollar una aplicación de visión computacional basada en inteligencia artificial que analice imágenes del entorno y brinde retroalimentación auditiva,
+facilitando la identificación de objetos importantes en tiempo real. Esta solución está pensada especialmente para apoyar a personas con discapacidad visual durante su movilidad diaria.
 
-Autor: 
+### Autores
 - **Maria Avendaño.**
 - **Melissa Muñoz.** 
 - **Juan Martin Triviño.**
 - **Ricardo Calixto.**
-
 """)
