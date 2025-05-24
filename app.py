@@ -11,8 +11,8 @@ import os
 
 # Configurar la página
 st.set_page_config(page_title="EyeIA con Gemini", layout="centered")
-st.title("👁️ Eye-AI con Gemini")
-st.write("Reconocimiento de objetos usando la API de Gemini y traducción a español con voz.")
+st.title("👁️ Eye-AI")
+# st.write("Reconocimiento de objetos usando la API de Gemini y traducción a español con voz.")
 
 # Configurar la clave de API de Gemini
 # genai.configure(api_key=os.getenv("GEMINI_API_KEY")) Para producción
