@@ -45,7 +45,28 @@ def analyze_image_with_gemini(image):
             "data": encoded_image
         },
         {
-            "text": "Describe resumidamente los objetos más importantes presentes en esta imagen."
+            "text": """Eres un asistente visual que ayuda a personas con discapacidad. Analiza la imagen y responde en español claro y sencillo.
+                    Objetos que pueden representar peligro:
+                    - Cuchillos, tijeras u objetos punzantes
+                    - Fuego, estufas encendidas o velas
+                    - Vidrios rotos o afilados
+                    - Productos químicos o envases con símbolos de peligro
+                    - Herramientas eléctricas (taladro, sierra, etc.)
+                    - Cables sueltos o mojados
+                    - Animales agresivos (perros bravos, serpientes)
+                    - Semaforos (en rojo)
+                    - Armas (pistola, ametralladoras, escopetas, rifles, fusiles de asalto, subfusiles, revolveres, etc.)
+                    - Botella de Agua Cristal
+
+                    Si detectas alguno de estos objetos en la imagen, por favor adviértelo claramente. Por ejemplo:
+
+                    **"Cuidado: hay un cuchillo visible sobre la mesa."**
+
+                    Si no ves nada peligroso, responde una breve descripción de lo que ves. Por ejemplo:
+
+                    **"Persona enfrente. Pared en frente."**
+
+                    Por favor, sé preciso y usa un lenguaje comprensible."""
         }
     ]
 
@@ -61,7 +82,8 @@ with col1:
 
 with col2:
     if imagen:
-        st.image(imagen, caption="Imagen capturada", use_container_width=True)
+        # rcalixto - Modificación para no mostrar imaggen
+        # st.image(imagen, caption="Imagen capturada", use_container_width=True)
         image = Image.open(imagen)
 
         st.subheader("📦 Análisis de imagen con Gemini:")
@@ -69,9 +91,10 @@ with col2:
         st.write(description)
 
         # Traducción y reproducción de voz
-        st.subheader("🌎 Traducción y Audio:")
-        translated = GoogleTranslator(source="en", target="es").translate(description)
-        st.success(f"**{translated}**")
-        play_audio(translated)
+        # rcalixto - Se elimina traducción ya que lo hace Gemini
+        # st.subheader("🌎 Traducción y Audio:")
+        # translated = GoogleTranslator(source="en", target="es").translate(description)
+        # st.success(f"**{translated}**")
+        play_audio(description)
     else:
         st.info("Por favor, captura una imagen para continuar.")
