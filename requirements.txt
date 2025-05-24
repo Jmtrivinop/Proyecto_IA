@@ -1,9 +1,6 @@
 streamlit
-transformers
-torch
-gTTS
-opencv-python-headless
 deep-translator
-pillow
-mediapipe 
+pillow 
+mediapipe
+gTTS
 google-generativeai

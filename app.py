@@ -45,7 +45,7 @@ def analyze_image_with_gemini(image):
             "data": encoded_image
         },
         {
-            "text": "Describe en detalle los objetos presentes en esta imagen."
+            "text": "Describe resumidamente los objetos más importantes presentes en esta imagen."
         }
     ]
 
